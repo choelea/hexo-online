@@ -1,14 +1,14 @@
 {
-  "name": "hexo-admin-ehc",
+  "name": "hexo-online",
   "version": "2.3.2",
-  "description": "Adds an admin section to the hexo server -- enchance version",
+  "description": "Adds an online section for hexo server",
   "main": "index.js",
   "scripts": {
     "prepublish": "gulp build"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lwz7512/hexo-admin-ehc.git"
+    "url": "https://github.com/choelea/hexo-online.git"
   },
   "keywords": [
     "hexo",
@@ -16,12 +16,12 @@
     "dashboard",
     "plugin"
   ],
-  "author": "Robin Li <lwz7512@gmail.com>",
+  "author": "Joe Li <joe.lea@foxmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lwz7512/hexo-admin-ehc/issues"
+    "url": "https://github.com/choelea/hexo-online/issues"
   },
-  "homepage": "https://github.com/lwz7512/hexo-admin-ehc",
+  "homepage": "https://github.com/choelea/hexo-online",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.5.0",
