@@ -1,6 +1,6 @@
 {
   "name": "hexo-online",
-  "version": "2.3.2",
+  "version": "2.3.3",
   "description": "Adds an online section for hexo server",
   "main": "index.js",
   "scripts": {
