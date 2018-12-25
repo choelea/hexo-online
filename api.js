@@ -373,11 +373,12 @@ module.exports = function (app, hexo) {
     }
 
     var msg = 'uploaded!'
+    var filename = imagePrefix + i +'.png'
     var i = 0
-    while (fs.existsSync(path.join(hexo.source_dir, imagePath, imagePrefix + i +'.png'))) {
+    while (fs.existsSync(path.join(hexo.source_dir, imagePath, filename))) {
       i +=1
     }
-    var filename = path.join(imagePrefix + i +'.png')
+    
     if (req.body.filename) {
       var givenFilename = req.body.filename
       // check for png ending, add it if not there
@@ -410,12 +411,13 @@ module.exports = function (app, hexo) {
       if (err) {
         console.log(err)
       }
+      var imageSrc = path.join(hexo.config.root + filename).replace(/\\/g, '/')
       console.log('hexo.config.url: '+hexo.config.url);
       hexo.source.process().then(function () {
         res.done({
           // FIXME, use image URL to display image rather than relative path @2018/02/04
-          src: hexo.config.url + filename,
-          // src: path.join(hexo.config.root + filename),
+          // src: hexo.config.url + filename,
+          src: imageSrc,
           msg: msg
         })
       });
