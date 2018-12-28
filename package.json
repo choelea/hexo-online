@@ -1,5 +1,5 @@
 {
-  "name": "hexo-online",
+  "name": "hexo-admin-online",
   "version": "2.3.3",
   "description": "Adds an online section for hexo server",
   "main": "index.js",
