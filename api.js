@@ -373,10 +373,11 @@ module.exports = function (app, hexo) {
     }
 
     var msg = 'uploaded!'
-    var filename = imagePrefix + i +'.png'
     var i = 0
+    var filename = imagePrefix + i +'.png'
     while (fs.existsSync(path.join(hexo.source_dir, imagePath, filename))) {
       i +=1
+      filename = imagePrefix + i +'.png'
     }
     
     if (req.body.filename) {
@@ -411,7 +412,8 @@ module.exports = function (app, hexo) {
       if (err) {
         console.log(err)
       }
-      var imageSrc = path.join(hexo.config.root + filename).replace(/\\/g, '/')
+      
+      var imageSrc = hexo.config.root + filename.replace(/\\/g, '/')
       console.log('hexo.config.url: '+hexo.config.url);
       hexo.source.process().then(function () {
         res.done({

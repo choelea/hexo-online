@@ -11,10 +11,8 @@ module.exports = function (app, hexo) {
   var imagesFile = path.join(hexo.source_dir, 'hexo-admin-ehc-images.json');
   // default images;
   var imagesData = [
-    {name: 'DASHENG-900x700-1.png', date: 1518959551960},
-    {name: 'DASHENG-900x700-2.png', date: 1518959599098},
-    {name: 'DASHENG-900x700-3.png', date: 1518959609913},
-    {name: 'DASHENG-900x700-4.png', date: 1518959618105}
+    {name: 'confusing.jpeg', date: 1518959551960},
+    {name: 'sad.jpg', date: 1518959599098}
   ];
 
   var multipartMiddleware = multipart();
